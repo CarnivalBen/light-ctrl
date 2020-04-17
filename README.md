@@ -113,3 +113,8 @@ Other Raspberry Pi devices on the network to share sensor statuses with.
 A list of scenarios that determine whether or not a light should be on or off depending on the state of the sensors, for example, a security light should only come on when the dust til dawn sensor is active, and the pir sensor detects movement.
 
 All sensors listed under a rule need to be active for the light to illuminate, unless the sensors are listed in a sub list, in which case only one of the sub listed sensors need to be active.
+
+
+## Homebridge
+
+To use iOS homekit to control the lights, Homebridge also needs to be installed, along with the Homebridge Http Webhooks plugin. Example config for this is found in the /homebridge folder.

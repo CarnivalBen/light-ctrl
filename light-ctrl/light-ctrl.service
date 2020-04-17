@@ -1,0 +1,15 @@
+[Unit]
+Description=Lighting Control
+After=network.target
+
+[Service]
+ExecStart=python /home/pi/light-ctrl/light-ctrl.py
+WorkingDirectory=/home/pi/light-ctrl
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
+

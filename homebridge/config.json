@@ -1,0 +1,54 @@
+{
+    "bridge": {
+        "name": "Homebridge 73B5",
+        "username": "0E:AB:A1:83:73:B5",
+        "port": 51385,
+        "pin": "389-29-709"
+    },
+    "accessories": [],
+    "platforms": [
+        {
+            "name": "Config",
+            "port": 8581,
+            "platform": "config"
+        },
+        {
+            "platform": "HttpWebHooks",
+            "webhook_port": "8582",
+            "switches": [
+                {
+                    "id": "gable",
+                    "name": "Gable Light",
+                    "on_url": "http://localhost:8090/gable/on",
+                    "on_method": "POST",
+                    "off_url": "http://localhost:8090/gable/off",
+                    "off_method": "POST"
+                },
+                {
+                    "id": "garden",
+                    "name": "Garden Light",
+                    "on_url": "http://localhost:8090/garden/on",
+                    "on_method": "POST",
+                    "off_url": "http://localhost:8090/garden/off",
+                    "off_method": "POST"
+                },
+                {
+                    "id": "wall",
+                    "name": "Wall Lights",
+                    "on_url": "http://localhost:8090/wall/on",
+                    "on_method": "POST",
+                    "off_url": "http://localhost:8090/wall/off",
+                    "off_method": "POST"
+                },
+                {
+                    "id": "ambient",
+                    "name": "Ambient Light",
+                    "on_url": "http://localhost:8090/ambient/on",
+                    "on_method": "POST",
+                    "off_url": "http://localhost:8090/ambient/off",
+                    "off_method": "POST"
+                }
+            ]
+        }
+    ]
+}
